@@ -1,11 +1,12 @@
 Yaml File Configuration
 =======================
-Simple library for loading and accessing configuration stored in .yml files. It relies on symfony/yaml for it's
+Simple library for loading and accessing configuration stored in .yml files. It relies on [symfony/yaml](http://github.com/symfony/yaml) for its
 functions. The library avoids loading Yaml file until requested (lazy loading) to avoid unnecessary loading and parsing.
 
 Installation
 ------------
 You can install the project via composer
+
 ```composer require dragooon\yamlfileconfig```
 
 Usage
