@@ -1,0 +1,14 @@
+{
+  "name": "dragooon/yaml-file-config",
+  "description": "Yaml file configuration handler",
+  "license": "MIT",
+  "type": "Library",
+  "autoload": {
+    "psr-4": {
+      "Dragooon\\YamlFileConfig\\": "src/"
+    }
+  },
+  "require": {
+    "symfony/yaml": "^3.0"
+  }
+}
