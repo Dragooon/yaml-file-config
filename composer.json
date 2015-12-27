@@ -3,6 +3,12 @@
   "description": "Yaml file configuration handler",
   "license": "MIT",
   "type": "Library",
+  "authors": [
+    {
+      "name": "Shitiz Garg",
+      "email": "mail@dragooon.net"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "Dragooon\\YamlFileConfig\\": "src/"
