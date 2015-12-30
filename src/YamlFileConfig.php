@@ -25,13 +25,6 @@ class YamlFileConfig extends ArrayConfiguration implements ConfigFileInterface
     protected $file;
 
     /**
-     * Yaml configuration stored in the file
-     *
-     * @var array
-     */
-    protected $config = array();
-
-    /**
      * Whether we have loaded the configuration or not
      *
      * @var bool
