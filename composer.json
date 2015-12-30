@@ -1,9 +1,8 @@
 {
-  "name": "dragooon/simple-config",
+  "name": "dragooon/yaml-file-config",
   "description": "Yaml file configuration handler",
   "license": "MIT",
   "type": "Library",
-  "version": "0.1.0",
   "authors": [
     {
       "name": "Shitiz Garg",
@@ -12,7 +11,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Dragooon\\SimpleConfig\\": "src/"
+      "Dragooon\\YamlFileConfig\\": "src/"
     }
   },
   "require": {

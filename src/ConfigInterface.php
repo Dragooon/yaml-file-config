@@ -1,6 +1,6 @@
 <?php
 
-namespace Dragooon\SimpleConfig;
+namespace Dragooon\YamlFileConfig;
 
 /**
  * Base interface for any class providing configuration

@@ -1,9 +1,9 @@
 <?php
 
-namespace Dragooon\SimpleConfig;
+namespace Dragooon\YamlFileConfig;
 
-use Dragooon\SimpleConfig\ConfigInterface;
-use Dragooon\SimpleConfig\Exception\UndefinedParameterException;
+use Dragooon\YamlFileConfig\ConfigInterface;
+use Dragooon\YamlFileConfig\Exception\UndefinedParameterException;
 
 class ArrayConfiguration implements ConfigInterface
 {

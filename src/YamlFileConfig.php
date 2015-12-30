@@ -6,9 +6,9 @@
  * @license The MIT License
  */
 
-namespace Dragooon\SimpleConfig;
-use Dragooon\SimpleConfig\Exception\InvalidFileException;
-use Dragooon\SimpleConfig\Exception\UndefinedParameterException;
+namespace Dragooon\YamlFileConfig;
+use Dragooon\YamlFileConfig\Exception\InvalidFileException;
+use Dragooon\YamlFileConfig\Exception\UndefinedParameterException;
 use Symfony\Component\Yaml\Yaml;
 
 /**

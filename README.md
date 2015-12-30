@@ -1,14 +1,13 @@
-Simple Configuration
+Yaml File Configuration
 =======================
-Simple library for loading and accessing configuration. By default it allows loading either into an array
-or from a .yml file. It relies on [symfony/yaml](http://github.com/symfony/yaml) for loading of YAML files
+Simple library for loading and accessing configuration stored in .yml files. It relies on [symfony/yaml](http://github.com/symfony/yaml) for its
 functions. The library avoids loading Yaml file until requested (lazy loading) to avoid unnecessary loading and parsing.
 
 Installation
 ------------
 You can install the project via composer
 
-```composer require dragooon\simple-config```
+```composer require dragooon\yamlfileconfig```
 
 Usage
 -----
@@ -21,9 +20,8 @@ parameter:
 name: abc
 ```
 
-### app.php
 ```php
-$config = new \Dragooon\SimpleConfig\YamlFileConfig('config.yml');
+$config = new \Dragooon\YamlFileConfig\YamlFileConfig('config.yml');
 echo $config['timeout']; // 10
 echo $config['parameter']['a']; // 1;
 echo $config->get('name'); // abc

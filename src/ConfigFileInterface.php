@@ -1,6 +1,6 @@
 <?php
 
-namespace Dragooon\SimpleConfig;
+namespace Dragooon\YamlFileConfig;
 
 /**
  * This interface defines the behaviour of a configuration loading from a file
