@@ -1,6 +1,6 @@
 <?php
 
-namespace Dragooon\YamlFileConfig\Exception;
+namespace Dragooon\SimpleConfig\Exception;
 
 /**
  * This exception is thrown when an undefined parameter is accessed

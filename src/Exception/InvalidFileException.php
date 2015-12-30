@@ -1,6 +1,6 @@
 <?php
 
-namespace Dragooon\YamlFileConfig\Exception;
+namespace Dragooon\SimpleConfig\Exception;
 
 /**
  * Exception is thrown when a file isn't found or is readable
