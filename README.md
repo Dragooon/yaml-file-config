@@ -20,6 +20,7 @@ parameter:
 name: abc
 ```
 
+### app.php
 ```php
 $config = new \Dragooon\YamlFileConfig\YamlFileConfig('config.yml');
 echo $config['timeout']; // 10
