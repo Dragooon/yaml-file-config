@@ -14,7 +14,7 @@ use Symfony\Component\Yaml\Yaml;
 /**
  * Base class for Yaml File Configuration
  */
-class YamlFileConfig implements \ArrayAccess
+class YamlFileConfig extends ArrayConfiguration implements ConfigFileInterface
 {
 
     /**
@@ -44,48 +44,28 @@ class YamlFileConfig implements \ArrayAccess
      */
     public function __construct($file)
     {
+        $this->setFile($file);
+        parent::__construct([]);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setFile($file)
+    {
         $this->file = $file;
     }
 
     /**
-     * @param string $key
-     * @return bool
+     * {@inheritdoc}
      */
-    public function has($key)
+    public function getFile()
     {
-        $this->load();
-        return isset($this->config[$key]);
+        return $this->file;
     }
 
     /**
-     * @param string $key
-     * @return mixed
-     * @throws UndefinedParameterException
-     */
-    public function get($key)
-    {
-        if (!$this->has($key)) {
-            throw new UndefinedParameterException($key);
-        }
-        return $this->config[$key];
-    }
-
-    /**
-     * @param string $key
-     * @param mixed $value
-     * @return void
-     */
-    public function set($key, $value)
-    {
-        $this->load();
-        $this->config[$key] = $value;
-    }
-
-    /**
-     * Loads configuration from file
-     *
-     * @return void
-     * @throws InvalidFileException
+     * {@inheritdoc}
      */
     public function load()
     {
@@ -102,10 +82,7 @@ class YamlFileConfig implements \ArrayAccess
     }
 
     /**
-     * Saves configuration into file using Yaml::dump
-     *
-     * @return void
-     * @throws InvalidFileException
+     * {@inheritdoc}
      */
     public function save()
     {
@@ -122,35 +99,28 @@ class YamlFileConfig implements \ArrayAccess
     /**
      * {@inheritdoc}
      */
-    public function offsetExists($offset)
+    public function has($key)
     {
-        return $this->has($offset);
+        $this->load();
+        return parent::has($key);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function offsetGet($offset)
+    public function set($key, $value)
     {
-        return $this->get($offset);
+        $this->load();
+        parent::set($key, $value);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function offsetSet($offset, $value)
+    public function getAll()
     {
-        $this->set($offset, $value);
+        $this->load();
+        return parent::getAll();
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function offsetUnset($offset)
-    {
-        if (!$this->has($offset)) {
-            throw new UndefinedParameterException($offset);
-        }
-        unset($this->config[$offset]);
-    }
 }
