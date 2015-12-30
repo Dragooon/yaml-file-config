@@ -7,7 +7,7 @@ Installation
 ------------
 You can install the project via composer
 
-```composer require dragooon\yamlfileconfig```
+```composer require dragooon/yaml-file-config```
 
 Usage
 -----
